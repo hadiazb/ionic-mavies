@@ -1,0 +1,7 @@
+<swiper-container [slidesPerView]="1.1" [loop]="false">
+  <swiper-slide *ngFor="let movie of recentMovies">
+    <ion-card (click)="onViewDetailMove(movie.id)">
+      <ion-img [src]="movie.backdrop_path | image"></ion-img>
+    </ion-card>
+  </swiper-slide>
+</swiper-container>

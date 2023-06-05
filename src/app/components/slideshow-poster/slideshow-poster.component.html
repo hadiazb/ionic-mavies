@@ -1,0 +1,7 @@
+<swiper-container [slidesPerView]="3.3" [spaceBetween]="-10" [loop]="false">
+  <swiper-slide *ngFor="let movie of movies">
+    <ion-card>
+      <ion-img class="poster" [src]="movie.poster_path | image"></ion-img>
+    </ion-card>
+  </swiper-slide>
+</swiper-container>
