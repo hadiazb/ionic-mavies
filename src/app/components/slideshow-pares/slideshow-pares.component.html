@@ -2,7 +2,7 @@
   <swiper-slide *ngFor="let pares of movies | pares">
     <ion-row>
       <ion-col class="i-col" *ngFor="let movie of pares">
-        <ion-card mode="md" class="i-card">
+        <ion-card mode="md" (click)="onViewDetailMove(movie.id)" mode="md" class="i-card">
           <ion-img class="poster" [src]="movie.poster_path | image"></ion-img>
         </ion-card>
       </ion-col>
@@ -10,7 +10,7 @@
   </swiper-slide>
   <ion-row>
     <ion-button class="btn-mas" (click)="onLoadMore()" size="small" shape="round">
-      <ion-icon slot="icon-only" name="add"></ion-icon>
+      <ion-icon slot="icon-only" mode="md" name="add"></ion-icon>
     </ion-button>
   </ion-row>
 </swiper-container>
